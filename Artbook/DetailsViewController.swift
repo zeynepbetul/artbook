@@ -19,6 +19,10 @@ class DetailsViewController: UIViewController {
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(recognizer)
+        
+        let recognizerPicker = UITapGestureRecognizer(target: self, action: #selector(pickImage))
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(recognizerPicker)
     }
     
     @IBAction func saveButton(_ sender: Any) {
@@ -26,6 +30,10 @@ class DetailsViewController: UIViewController {
     
     @objc func hideKeyboard() {
         view.endEditing(true)
+    }
+    
+    @objc func pickImage() {
+        
     }
 
 }
