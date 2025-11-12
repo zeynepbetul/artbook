@@ -46,6 +46,7 @@ class DetailsViewController: UIViewController, UINavigationControllerDelegate, U
         } catch {
             print("error")
         }
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc func hideKeyboard() {
