@@ -22,6 +22,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addButtonClicked))
     }
+    
+    func getData() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Paintings")
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            for result in results as! [NSManagedObject] {
+                if let name = result.value(forKey: "name") as? String {
+                    nameArray.append(name)
+                }
+                if let id = result.value(forKey: "id") as? UUID {
+                    idArray.append(id)
+                }
+            }
+        } catch {
+            
+        }
+    }
+    
     @objc func addButtonClicked() {
         performSegue(withIdentifier: "toDetailsVC", sender: nil)
     }
