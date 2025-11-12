@@ -75,7 +75,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEj-7b-Je9">
                                 <rect key="frame" x="159" y="683" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                 <connections>
                                     <action selector="saveButton:" destination="p1w-WM-nkG" eventType="touchUpInside" id="cqe-Da-5do"/>
                                 </connections>
@@ -103,6 +103,7 @@
                     <navigationItem key="navigationItem" id="Vv6-of-2aV"/>
                     <connections>
                         <outlet property="imageView" destination="wIk-t2-KtY" id="5lN-eY-P1G"/>
+                        <outlet property="saveButton" destination="aEj-7b-Je9" id="prG-0l-XZC"/>
                         <outlet property="textFieldArtist" destination="ER4-DL-piT" id="uwM-cA-jGQ"/>
                         <outlet property="textFieldName" destination="uwc-Ip-tWk" id="5es-Hn-VaH"/>
                         <outlet property="textFieldYear" destination="BVX-VY-Lmg" id="tdy-vj-Qop"/>
