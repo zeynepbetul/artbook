@@ -46,6 +46,7 @@ class DetailsViewController: UIViewController, UINavigationControllerDelegate, U
         } catch {
             print("error")
         }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "newData"), object: nil)
         self.navigationController?.popViewController(animated: true)
     }
     
