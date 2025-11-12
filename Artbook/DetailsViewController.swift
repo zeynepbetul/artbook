@@ -26,6 +26,8 @@ class DetailsViewController: UIViewController, UINavigationControllerDelegate, U
     }
     
     @IBAction func saveButton(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
     }
     
     @objc func hideKeyboard() {

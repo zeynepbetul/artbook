@@ -6,7 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C951992B2EC4C91100307746 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C951992A2EC4C91100307746 /* CoreData.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		C951992A2EC4C91100307746 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C9E095FD2EC3707C008A3671 /* Artbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,16 +41,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C951992B2EC4C91100307746 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C95199292EC4C91100307746 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C951992A2EC4C91100307746 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C9E095F42EC3707B008A3671 = {
 			isa = PBXGroup;
 			children = (
 				C9E095FF2EC3707C008A3671 /* Artbook */,
+				C95199292EC4C91100307746 /* Frameworks */,
 				C9E095FE2EC3707C008A3671 /* Products */,
 			);
 			sourceTree = "<group>";
