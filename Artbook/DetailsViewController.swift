@@ -15,8 +15,15 @@ class DetailsViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet weak var textFieldArtist: UITextField!
     @IBOutlet weak var textFieldYear: UITextField!
     
+    var chosenPainting = ""
+    var chosenPaintingId: UUID?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if chosenPainting != "" {
+            
+        }
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(recognizer)
